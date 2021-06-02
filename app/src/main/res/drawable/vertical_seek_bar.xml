@@ -1,0 +1,31 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@android:id/progress">
+        <clip>
+            <shape>
+                <solid
+                    android:color="@color/vm_btn_selected"/>
+                <corners
+                    android:radius="25dp"
+                    />
+                <stroke
+                    android:width="4dp"
+                    android:color="@color/vm_strip"
+                    />
+            </shape>
+        </clip>
+    </item>
+    <item android:id="@android:id/background">
+        <shape>
+            <corners
+                android:radius="25dp"
+                />
+            <solid
+                android:color="#00000000"
+                />
+            <stroke
+                android:width="5dp"
+                android:color="@color/vm_btn_selected"
+                />
+        </shape>
+    </item>
+</layer-list>

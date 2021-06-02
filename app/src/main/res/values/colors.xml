@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="vm_background">#36495A</color>
+    <color name="vm_strip">#2C3D4D</color>
+
+    <color name="vm_text">#718ba2</color>
+
+    <color name="vm_btn">#5f7889</color>
+    <color name="vm_btn_selected">#70c399</color>
+    <color name="vm_btn_mute">#f66051</color>
+
+    <color name="vm_knob_handle">#ccd0d4</color>
+</resources>

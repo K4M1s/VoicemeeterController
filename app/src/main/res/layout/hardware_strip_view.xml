@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/vm_strip">
+
+    <TextView
+        android:id="@+id/stripName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/strip_title"
+        android:textSize="28sp"
+        android:gravity="center_horizontal"
+        android:textColor="@color/vm_text"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal"
+        android:paddingVertical="20dp">
+
+        <it.beppi.knoblibrary.Knob
+            android:id="@+id/compKnob"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            app:kNumberOfStates="101"
+            app:kFreeRotation="false"
+            app:kMinAngle="-160"
+            app:kMaxAngle="160"
+            app:kKnobCenterRelativeRadius="0"
+            app:kIndicatorColor="@color/vm_text"
+            app:kKnobRelativeRadius="0"
+            app:kIndicatorWidth="0dp"
+            app:kStateMarkersColor="@color/vm_btn"
+            app:kStateMarkersWidth="2dp"
+            android:padding="10dp"
+            app:kSelectedStateMarkerContinuous="true"
+            app:kSelectedStateMarkerColor="@color/vm_btn_selected"
+            app:kCircularIndicatorRelativeRadius="0.2"
+            app:kCircularIndicatorRelativePosition="0.5"
+            app:kCircularIndicatorColor="@color/vm_knob_handle"
+            />
+
+        <it.beppi.knoblibrary.Knob
+            android:id="@+id/gateKnob"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            app:kNumberOfStates="101"
+            app:kFreeRotation="false"
+            app:kMinAngle="-160"
+            app:kMaxAngle="160"
+            app:kKnobCenterRelativeRadius="0"
+            app:kIndicatorColor="@color/vm_text"
+            app:kKnobRelativeRadius="0"
+            app:kIndicatorWidth="0dp"
+            app:kStateMarkersColor="@color/vm_btn"
+            app:kStateMarkersWidth="2dp"
+            app:kSelectedStateMarkerContinuous="true"
+            app:kSelectedStateMarkerColor="@color/vm_btn_selected"
+            app:kCircularIndicatorRelativeRadius="0.2"
+            app:kCircularIndicatorRelativePosition="0.5"
+            app:kCircularIndicatorColor="@color/vm_knob_handle"
+            android:layout_marginLeft="10dp"
+            />
+
+    </LinearLayout>
+
+    <Space
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <ProgressBar
+                android:id="@+id/vumeterL"
+                android:layout_width="3dp"
+                android:layout_height="match_parent"
+                style="@android:style/Widget.ProgressBar.Horizontal"
+                android:progress="100"
+                android:progressDrawable="@drawable/progress_drawable_vertical"
+                android:paddingVertical="30dp"
+                android:layout_marginRight="1dp"
+                android:layout_marginEnd="1dp" />
+            <ProgressBar
+                android:id="@+id/vumeterR"
+                android:layout_width="3dp"
+                android:layout_height="match_parent"
+                style="@android:style/Widget.ProgressBar.Horizontal"
+                android:progress="100"
+                android:progressDrawable="@drawable/progress_drawable_vertical"
+                android:paddingVertical="30dp"
+                android:layout_marginRight="3dp"
+                android:layout_marginEnd="3dp" />
+
+            <RelativeLayout
+                android:id="@+id/gain_fader_value_layout"
+                android:layout_width="match_parent"
+                android:layout_height="350dp"
+                android:gravity="center">
+
+                <android.widget.VerticalSeekBar
+                    android:id="@+id/gain_fader"
+                    android:layout_width="50dp"
+                    android:layout_height="match_parent"
+                    android:max="720"
+                    android:maxWidth="25dp"
+                    android:maxHeight="25dp"
+                    android:paddingHorizontal="25dp"
+                    android:progress="0"
+                    android:progressDrawable="@drawable/vertical_seek_bar"
+                    android:thumb="@drawable/vertical_seek_bar_thumb" />
+
+                <TextView
+                    android:id="@+id/gain_fader_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/seek_bar_label"
+                    android:padding="2dp"
+                    android:text=""
+                    android:textColor="@color/vm_text" />
+
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/btn_bus_a1"
+                android:layout_width="55dp"
+                android:layout_height="35dp"
+                android:background="@drawable/button_border"
+                android:minWidth="1dp"
+                android:minHeight="1dp"
+                android:paddingHorizontal="7dp"
+                android:paddingVertical="4dp"
+                android:text="@string/strip_button_a1"
+                android:textColor="@color/vm_text"
+                app:autoSizeTextType="uniform" />
+
+            <Button
+                android:id="@+id/btn_bus_a2"
+                android:layout_width="55dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/button_border"
+                android:minWidth="1dp"
+                android:minHeight="1dp"
+                android:paddingHorizontal="7dp"
+                android:paddingVertical="4dp"
+                android:text="@string/strip_button_a2"
+                android:textColor="@color/vm_text"
+                app:autoSizeTextType="uniform" />
+
+            <Button
+                android:id="@+id/btn_bus_a3"
+                android:layout_width="55dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/button_border"
+                android:minWidth="1dp"
+                android:minHeight="1dp"
+                android:paddingHorizontal="7dp"
+                android:paddingVertical="4dp"
+                android:text="@string/strip_button_a3"
+                android:textColor="@color/vm_text"
+                app:autoSizeTextType="uniform" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="15dp" />
+
+            <Button
+                android:id="@+id/btn_bus_b1"
+                android:layout_width="55dp"
+                android:layout_height="35dp"
+                android:background="@drawable/button_border"
+                android:minWidth="1dp"
+                android:minHeight="1dp"
+                android:paddingHorizontal="7dp"
+                android:paddingVertical="4dp"
+                android:text="@string/strip_button_b1"
+                android:textColor="@color/vm_text"
+                app:autoSizeTextType="uniform" />
+
+            <Button
+                android:id="@+id/btn_bus_b2"
+                android:layout_width="55dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/button_border"
+                android:minWidth="1dp"
+                android:minHeight="1dp"
+                android:paddingHorizontal="7dp"
+                android:paddingVertical="4dp"
+                android:text="@string/strip_button_b2"
+                android:textColor="@color/vm_text"
+                app:autoSizeTextType="uniform" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="15dp" />
+
+            <Button
+                android:id="@+id/btn_mono"
+                android:layout_width="55dp"
+                android:layout_height="35dp"
+                android:background="@drawable/button_border"
+                android:minWidth="1dp"
+                android:minHeight="1dp"
+                android:paddingHorizontal="7dp"
+                android:paddingVertical="4dp"
+                android:text="@string/strip_button_mono"
+                android:textColor="@color/vm_text"
+                app:autoSizeTextType="uniform" />
+
+            <Button
+                android:id="@+id/btn_solo"
+                android:layout_width="55dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/button_border"
+                android:minWidth="1dp"
+                android:minHeight="1dp"
+                android:paddingHorizontal="7dp"
+                android:paddingVertical="4dp"
+                android:text="@string/strip_button_solo"
+                android:textColor="@color/vm_text"
+                app:autoSizeTextType="uniform" />
+
+            <Button
+                android:id="@+id/btn_mute"
+                android:layout_width="55dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/button_border"
+                android:minWidth="1dp"
+                android:minHeight="1dp"
+                android:paddingHorizontal="7dp"
+                android:paddingVertical="4dp"
+                android:text="@string/strip_button_mute"
+                android:textColor="@color/vm_text"
+                app:autoSizeTextType="uniform" />
+
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

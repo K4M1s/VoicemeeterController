@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="VMBus">
+        <attr name="bStripName" format="string" />
+        <attr name="bStripID" format="integer" />
+    </declare-styleable>
+    <declare-styleable name="VMHardwareStrip">
+        <attr name="hStripName" format="string" />
+        <attr name="hStripID" format="integer" />
+    </declare-styleable>
+    <declare-styleable name="VMSoftwareStrip">
+        <attr name="sStripName" format="string" />
+        <attr name="sStripID" format="integer" />
+    </declare-styleable>
+
+</resources>

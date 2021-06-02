@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">VoiceMeeter Controller</string>
+    <string name="strip_title">Strip #</string>
+    <string name="strip_button_reset_knob_comp">COMP</string>
+    <string name="strip_button_reset_knob_gate">GATE</string>
+
+    <string name="strip_button_a1">►A1</string>
+    <string name="strip_button_a2">►A2</string>
+    <string name="strip_button_a3">►A3</string>
+
+    <string name="strip_button_b1">►B1</string>
+    <string name="strip_button_b2">►B2</string>
+
+    <string name="strip_button_mono">MONO</string>
+    <string name="strip_button_solo">SOLO</string>
+    <string name="strip_button_eq">EQ</string>
+    <string name="strip_button_mute">MUTE</string>
+</resources>
